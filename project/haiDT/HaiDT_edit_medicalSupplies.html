@@ -67,6 +67,7 @@
                     <i class="fas fa-user"></i>
                 </button>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../haiDT/HaiDT_create_medicalSupplies.html">Thêm Mới Vật Tư</a></li>
                     <li><a class="dropdown-item" href="../trungND/TrungND_EditUser.html">Chỉnh Sửa Cá Nhân</a></li>
                     <li><a class="dropdown-item" href="../namND/NamND_Register.html">Đăng Kí</a></li>
                     <li><a class="dropdown-item" href="../trungND/TrungND_ChangePassword.html">Đổi Mật Khẩu</a></li>
@@ -142,68 +143,77 @@
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row mt-4">
-        <div class="col">
-        </div>
-        <div class="col-11 shadow container">
-            <form action="" class="row">
-                <div class="container mt-4">
-                    <h3 class="row justify-content-center">Chỉnh sửa vật tư</h3>
-                </div>
-                <div class="row mt-4 mt-4">
-                    <div class="col-md-5">
-                        <img class="rounded mx-auto d-block mt-5" style="height: 70%; width:85%;"
-                             src="https://png.pngtree.com/background/20211215/original/pngtree-medical-supplies-background-picture-image_1451239.jpg">
-                        <div class="mt-4" style="text-align: center;">
-                            <button class="btn btn-primary">Sửa ảnh</button>
+<div class="row content">
+    <div class="col-lg-12 pt-lg-5">
+        <div class="d-flex justify-content-center">
+            <div class="col-7">
+                <div class="form-control shadow rounded-0 p-4" style="background-image: url('../img/yte.png')">
+                    <h2 class="text-secondary fw-bolder text-center" style="padding-top:3%">
+                        Chỉnh Sửa vật tư
+                    </h2>
+                    <div class="row py-5 mt-4 align-items-center">
+                        <!-- For Demo Purpose -->
+                        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0" style="text-align: center">
+                            <img src="https://tankieu.vn/public/upload/images/pills-medical-tools-arrangement-flat-lay-min%20(1).jpg"
+                                 alt="img"
+                                 class="img-fluid mb-3 d-none d-md-block rounded-0" style="padding-left: 18%">
+                            <button class="btn btn-success btn-sm">Thay Đổi</button>
+                        </div>
+
+                        <!--Form -->
+                        <div class="col-md-7 col-lg-6 ml-auto">
+                            <form action="#">
+                                <div class="row">
+                                    <!-- tên vật tư -->
+                                    <div class="input-group col-lg-6 mb-4">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-user"></i>
+                            </span>
+                                        <input id="name" type="text" name="name" placeholder="Tên vật tư"
+                                               class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                    <!-- loại vật tư-->
+                                    <div class="input-group col-lg-6 mb-4">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </span>
+                                        <input id="address" type="text" name="address" placeholder="Loại vật tư"
+                                               class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                    <!-- đơn giá-->
+                                    <div class="input-group col-lg-6 mb-4">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                               <i class="fas fa-dollar-sign"></i>
+                            </span>
+                                        <input id="phone" type="number" name="phone" placeholder="Đơn giá"
+                                               class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                    <!--hạn sử dụng-->
+                                    <div class="input-group col-lg-6 mb-4">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                               <i class="fas fa-birthday-cake"></i>
+                            </span>
+                                        <input id="email" type="date" name="email" placeholder="Hạn sử dụng"
+                                               class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                    <!-- Nhà cung cấp-->
+                                    <div class="input-group col-lg-6 mb-4">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fas fa-truck-moving"></i>
+                            </span>
+                                        <input id="birthday" type="text" name="birthday" placeholder="Nhà cung cấp"
+                                               class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                </div>
+                                <div class="d-flex me-5 justify-content-center gap-3">
+                                    <button class="btn btn-secondary btn-sm"><a href="../anHN/AnHN_Home1.html" style="color: white;text-decoration: none">Hủy</a></button>
+                                    <button class="btn btn-success btn-sm">Cập nhật</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-md-7">
-                        <div>
-                            <label class="form-label">Mã vật tư <span style="color: red">(*)</span></label>
-                            <input class=" form-control form-control-sm mb-2">
-                            <small class="text-danger">Không được để trống</small>
-                        </div>
-                        <div>
-                            <label class="form-label">Tên vật tư <span style="color: red">(*)</span></label>
-                            <input class=" form-control form-control-sm mb-2">
-                        </div>
-                        <div>
-                            <label class="form-label">Loại vật tư <span style="color: red">(*)</span></label>
-                            <select class=" form-control form-control-sm mb-2">
-                                <option>Chọn loại thiết bị</option>
-                                <option>Thiết bị mổ</option>
-                                <option>Thiết xét nghiệm</option>
-                                <option>Băng gạc sơ cức</option>
-                            </select>
-                            <small class="text-danger">Vui lòng chọn loại thiết bị</small>
-                        </div>
-                        <div>
-                            <label class="form-label">Đơn giá (VNĐ) <span style="color: red">(*)</span></label>
-                            <input class=" form-control form-control-sm mb-2">
-                        </div>
-                        <div>
-                            <label class="form-label">Hạn sử dụng <span style="color: red">(*)</span></label>
-                            <input type="date" class=" form-control form-control-sm mb-2">
-                        </div>
-                        <div>
-                            <label class="form-label">Nhà cung cấp <span style="color: red">(*)</span></label>
-                            <input class=" form-control form-control-sm mb-2">
-                        </div>
-                        <div class="mt-4 mb-4">
-                            <div class="row justify-content-between">
-                                <div class="col-4">
-                                    <button class="btn btn-danger" ><a href="../anHN/Home.html">Hủy</a></button>
-                                </div>
-                                <div class="col-4">
-                                    <button class="btn btn-primary" ><a>Chỉnh Sửa</a></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
