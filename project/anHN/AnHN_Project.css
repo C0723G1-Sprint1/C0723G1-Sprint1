@@ -69,13 +69,16 @@ footer{
 .row-1-home{
     padding-top: 30px;
     text-align: center;
+    margin: 10px;
 }
 .row-2-home{
     text-align: center;
+    margin: 10px;
 }
 .row-3-home{
     padding-bottom: 30px;
     text-align: center;
+    margin: 10px;
 }
 
 .center{
