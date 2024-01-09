@@ -9,6 +9,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
             integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../sidebar/sideBar.css">
+
 
 </head>
 <body>
@@ -163,139 +165,223 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid wrapper">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="h-100">
+            <div class="sidebar-logo">
+                <div class="user-img">
+                    <img style="height: 4rem;width: 4rem;border-radius: 50%"
+                         src="https://a0.anyrgb.com/pngimg/16/486/user-profile-user-experience-user-interface-design-avatar-user-interface-ico-person-user-man-computer-software-thumbnail.png"
+                         alt="">
+                </div>
+                <div class="user-detail">
+                    <div class="title">Quản Lý</div>
+                    <div class="name">Nguyễn Văn A</div>
 
-<div class="home container">
-    <div class="row row-home">
-        <h2>DANH SÁCH VẬT TƯ</h2>
-        <div class="row row-1-home">
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_2.png"
-                             alt="Card image" height="280"
-                             width="250">
+                </div>
+            </div>
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-header text-dark">
+                    Vật Tư
+                </li>
+                <li class="sidebar-item">
+                    <a href="../haiDT/HaiDT_create_medicalSupplies.html" class="sidebar-link text-dark">
+                        <i class="fa-solid fa-list pe-2"></i>
+                        Thêm Vật Tư
                     </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Máy tạo oxi</h5>
-                        <p class="card-text">Giá: 500.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html"><img class="card-img-top" src="../img/img_3.png"
-                                                                            alt="Card image" height="280"
-                                                                            width="250"></a>
-                    <div class="card-body">
-                        <h5 class="card-text">Vải không dệt</h5>
-                        <p class="card-text">Giá: 150.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_4.png" alt="Card image" height="280" width="250">
+                </li>
+                <li class="sidebar-header text-dark">
+                    Chức Năng
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed text-dark" data-bs-toggle="collapse"
+                       data-bs-target="#pages"
+                       aria-expanded="false" aria-controls="pages">
+                        <i class="fa-regular fa-file-lines pe-2"></i>
+                        Thông Tin
                     </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Giày và mũ bảo hiểm y tế</h5>
-                        <p class="card-text">Giá: 150.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
+                    <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item ">
+                            <a href="../trungND/TrungND_EditUser.html" class="sidebar-link text-dark">Chỉnh Sửa Thông Tin</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="../trungND/TrungND_ChangePassword.html" class="sidebar-link text-dark">Đổi Mật Khẩu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../namND/NamND_Register.html" class="sidebar-link text-dark">
+                        <i class="fa-solid fa-list pe-2"></i>
+                        Đăng Kí Nhân Viên
+                    </a>
+                </li>
+                <li class="sidebar-item" style="padding-top: 80%;padding-left: 12%">
+                    <a href="../anHN/AnHN_Home.html" class="sidebar-link text-dark">
+                        <i class="fa-solid fa-list pe-2"></i>
+                        <button class="btn btn-outline-secondary">Đăng Xuất</button>
+                    </a>
+                </li>
+            </ul>
         </div>
+    </aside>
+    <!-- Main Component -->
+    <div class="main">
+        <nav class="navbar navbar-expand px-3 border-bottom">
+            <!-- Button for sidebar toggle -->
+            <button class="btn btn-sm" type="button" data-bs-theme="dark">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <main class="content px-3 py-2">
+            <div class="container-fluid">
+                <div class="home container">
+                    <div class="row row-home">
+                        <h2>DANH SÁCH VẬT TƯ</h2>
+                        <div class="row row-1-home">
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_2.png"
+                                             alt="Card image" height="280"
+                                             width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Máy tạo oxi</h5>
+                                        <p class="card-text">Giá: 500.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html"><img class="card-img-top" src="../img/img_3.png"
+                                                                                            alt="Card image" height="280"
+                                                                                            width="250"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Vải không dệt</h5>
+                                        <p class="card-text">Giá: 150.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_4.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Giày và mũ bảo hiểm y tế</h5>
+                                        <p class="card-text">Giá: 150.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="row row-2-home">
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_5.png" alt="Card image" height="280" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Áo choàng bảo hộ y tế</h5>
-                        <p class="card-text">Giá: 200.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_6.png" alt="Card image" height="255" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Khẩu trang Famapro VN95 không van thở</h5>
-                        <p class="card-text">Giá: 120.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_7.png" alt="Card image" height="280" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Máy tạo Oxy Gia Đình</h5>
-                        <p class="card-text">Giá: 500.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="row row-2-home">
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_5.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Áo choàng bảo hộ y tế</h5>
+                                        <p class="card-text">Giá: 200.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_6.png" alt="Card image" height="255" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Khẩu trang Famapro VN95 không van thở</h5>
+                                        <p class="card-text">Giá: 120.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_7.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Máy tạo Oxy Gia Đình</h5>
+                                        <p class="card-text">Giá: 500.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="row row-3-home">
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_8.png" alt="Card image" height="280" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Găng tay</h5>
-                        <p class="card-text">Giá: 100.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                        <div class="row row-3-home">
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_8.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Găng tay</h5>
+                                        <p class="card-text">Giá: 100.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_9.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Trọn bộ bảo hộ y tế</h5>
+                                        <p class="card-text">Giá: 200.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="card" style="width:400px">
+                                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
+                                        <img class="card-img-top" src="../img/img_10.png" alt="Card image" height="280" width="250">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-text">Vải lọc khảng khuẩn pp</h5>
+                                        <p class="card-text">Giá: 150.000 VNĐ</p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                        <a href="#" class="btn btn-success">Chỉnh Sửa</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="pagination">
+                                <a href="#">&laquo;</a>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">&raquo;</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_9.png" alt="Card image" height="280" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Trọn bộ bảo hộ y tế</h5>
-                        <p class="card-text">Giá: 200.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="card" style="width:400px">
-                    <a href="../haiDT/HaiDT_edit_medicalSupplies.html">
-                        <img class="card-img-top" src="../img/img_10.png" alt="Card image" height="280" width="250">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-text">Vải lọc khảng khuẩn pp</h5>
-                        <p class="card-text">Giá: 150.000 VNĐ</p>
-                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="center">
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </div>
+        </main>
     </div>
 </div>
+
 
 <footer>
     <div class="container-fluid">
@@ -369,5 +455,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+<script src="../sidebar/viaSidebar.js"></script>
 </body>
 </html>
